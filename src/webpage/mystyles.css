@@ -1,0 +1,32 @@
+#he1
+{
+    text-align: center;
+    color:Blue;
+    font-family: Arial;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-right: 50px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#options
+{
+  align-items: center;
+  position: relative;
+  left:600px;
+  top:20px;
+}

@@ -19,6 +19,30 @@ button {
   margin-right: 50px;
 }
 
+.container {
+  padding: 16px;
+}
+
+#form_page {
+            height: 500px;
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin: auto;
+  
+        }
+
+#form_body {
+    border-radius: 12px;
+    height: 330px;
+    width: 450px;
+    background-color: beige;
+    border: 1px solid pink;
+    margin: auto;
+    margin-top: 12px;
+}
+
 button:hover {
   opacity: 0.8;
 }

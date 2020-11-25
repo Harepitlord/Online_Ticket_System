@@ -17,16 +17,16 @@
   <div id="form_body">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required><br>
-    <label for="psw"><b>Password</b></label>
+    <br><label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required><br>
-    <button type="submit">Login</button><br>
-    <label>
-  </div>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
+    <br><input id="but" type="submit" value="Login"/><br>
+    <input type="checkbox" checked="checked" name="remember"><label> Remember me
     </label>
   </div>
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
+
+  </div>
+  <div class="container" style="background-color:#f1f1f1; position:center;">
+    <input id="but" value="Cancel" type="button" class="cancelbtn" onclick="location.href='homepage.html'" "/>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>

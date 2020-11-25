@@ -1,8 +1,8 @@
 #he1
 {
     text-align: center;
-    color:Blue;
-    font-family: Arial;
+    color:red;
+    font-family: Verdana;
     font-style: italic;
     font-weight: bold;
 
@@ -10,7 +10,7 @@
 
 #b1 {
   background-image: url('train.jpg');
-  background-size: 100%;
+  background-size: auto;
   background-position: center;
 }
 
@@ -19,7 +19,7 @@
   font-weight: bold;
 }
 
-button {
+#but {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -32,21 +32,24 @@ button {
 
 .container {
   padding: 16px;
+  width :40%;
+  margin: auto;
 }
 
 #form_page {
-            height: 500px;
-            width: 50%;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            margin: auto;
+    height: 350px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+    top:200px;
 
-        }
+}
 
 #form_body {
     border-radius: 12px;
-    height: 450px;
+    height: 200px;
     width: 450px;
     background-color: beige;
     border: 1px solid black;
@@ -61,8 +64,7 @@ button:hover {
 
 #options
 {
-  align-items: center;
-  position: relative;
-  left:600px;
+  margin: auto;
+  left:650px;
   top:20px;
 }

@@ -12,22 +12,22 @@
     <h3 id="he1">Software Engineering Laboratory <br></h3>
     <h2 id="he1"> Signup</h2>
   </div>
-  <form action="signup.php" method="post">
+  <form >
   <div id="form_page">
     <div id="form_body">
-      <label for="uname"><b>Username</b></label>
+      <label for="uname"><p id="p1"><b>Username:</b></p></label>
       <input type="text" placeholder="Enter Username" name="uname" required><br>
-      <label for="email"><b>Email</b></label>
+      <label for="email"><p id="p1"><b>Email:</b></p></label>
       <input type="text" placeholder-"Enter Email ID" name="email" required><br>
-      <label for="psw"><b>Password</b></label>
+      <label for="psw"><p id="p1"><b>Password:</b></p></label>
       <input type="password" placeholder="Enter Password" name="psw" required><br>
-      <label for="rpsw"><b>Re-enter Password</b></label>
-      <input type="password" placeholder="Enter Password" name="rpsw" required><br>
-      <button type="submit">Signup</button><br>
+      <label for="rpsw"><p id="p1"><b>Re-enter Password:</b></p></label>
+      <input type="password" placeholder="Enter Password" name="rpsw" required> <br>
+      <br><input type="button" value="submit" onClick="javascript:dataAdd()"/><br>
     </div>
-    </div>
+  </div>
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">Cancel</button>
+      <input type="button" value="Cancel" onclick="location.href = 'homepage.html'" class="cancelbtn" style="width:auto;"/>
     </div>
   </form>
 </body>

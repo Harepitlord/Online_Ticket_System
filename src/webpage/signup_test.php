@@ -9,7 +9,7 @@
         );
         return json_encode($datae);
     }
-    $name=signup;
+    $name='data';
     $filename=$name.'.json';
     $handle=@fopen($filename,'r+');
     if($handle==null) {
@@ -30,5 +30,7 @@
       else
         echo 'There is a internel error in appending data';
     }
+    header("Location: Signup.html");
+    exit;
   }
   ?>

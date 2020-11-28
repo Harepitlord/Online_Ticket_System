@@ -57,11 +57,8 @@
       echo "</select>";
       ?>
     <br><br>
-<<<<<<< HEAD:webpage/chktrain.php
     <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-=======
     <input type='submit' value='Submit'style="margin-left:50px;"/>
->>>>>>> d7b641628d3173ecc37a64817649bfa7d5b9dcbd:src/webpage/chktrain.php
   </form>
   </div>
 </body>

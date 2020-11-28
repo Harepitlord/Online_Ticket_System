@@ -30,7 +30,7 @@ button {
             flex-wrap: wrap;
             flex-direction: row;
             margin: auto;
-  
+
         }
 
 #form_body {
@@ -41,6 +41,7 @@ button {
     border: 1px solid pink;
     margin: auto;
     margin-top: 12px;
+    margin-left: 20px;
 }
 
 button:hover {

@@ -1,13 +1,13 @@
 <?php
 require_once "sqlconnect.php";
-if(isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['psw']))) {
+if(isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['psw'])) {
   $sql1= "SELECT uname from  users where users.uname = :uname";
   $sql2= "SELECT email from users where users.email = :email";
   $stmt1 = $pdo->prepare($sql1);
   $stmt2 = $pdo->prepare($sql2);
-  $stmt1 = execute(array(':uname' => $_POST['uname']));
-  $stmt2 = execute(array(':email' => $_POST['email']));
-  if((stmt1->rowCount() > 0) && (stmt2->rowCount() > 0))
+  $stmt1->execute(array(':uname' => $_POST['uname']));
+  $stmt2-> execute(array(':email' => $_POST['email']));
+  if(($stmt1->rowCount() > 0) && ($stmt2->rowCount() > 0))
     echo "Username and Email already exists\n";
   else if($stmt1->rowCount() > 0)
     echo "Username already exists \n";

@@ -18,9 +18,9 @@
       $sql = "SELECT name,pantry FROM train WHERE beg_station = :first and end_station = :second and day_id = :day";
       $stmt=$pdo->prepare($sql);
       $stmt->execute(array(
-        ':first'=>$_GET['frst'],
-        ':second'=>$_GET['tost'],
-        ':day'=>$_GET['day']));
+        ':first'=>(int)$_GET['frst'],
+        ':second'=>(int)$_GET['tost'],
+        ':day'=>(int)$_GET['day']));
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $sqls = "SELECT * FROM station";
       $stmts = $pdo->prepare($sqls);

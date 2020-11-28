@@ -8,15 +8,15 @@
 </head>
 <body>
   <?php
-  echo "hello world world";
+  echo "hello world world\n";
     require_once "sqlconnect.php";
-    var_dump($_POST);
-    if(isset($_POST['frst']) && isset($_POST['tost']) && isset($_POST['day'])) {
-      $first = (int)$_POST['frst'];
-      $tostion = (int)$_POST['tost'];
-      $dayid = (int)$_POST['day'];
-      echo $_POST['frst'];
-      var_dump($_POST);
+    var_dump($_GET);
+    if(isset($_GET['frst']) && isset($_GET['tost']) && isset($_GET['day'])) {
+      $first = $_GET['frst'];
+      $tostion = $_GET['tost'];
+      $dayid = $_GET['day'];
+      echo $_GET['frst'];
+      var_dump($_GET);
       $sql = "SELECT name,pantry FROM train WHERE beg_station = :first and end_station = :second and day_id = :day";
       $stmt=$pdo->prepare($sql);
       $stmt->execute(array(

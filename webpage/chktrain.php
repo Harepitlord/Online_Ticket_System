@@ -15,7 +15,7 @@
   <div id="form_body" action="/train.php" style="height:200px;width:300px;">
     <form  style=" height:40px;margin-left:15px;" method="post"><br>
       <label for ="From:">From:</label>
-        <?php
+        <?php 
           require_once "sqlconnect.php";
           $sql = "SELECT * FROM station";
           $stmt = $pdo->prepare($sql);

@@ -15,9 +15,7 @@ function convertInt(&$rw,$c) {
 </head>
 <body>
   <?php
-  echo "hello world world\n";
     require_once "sqlconnect.php";
-    var_dump($_GET);
     if(isset($_GET['frst']) && isset($_GET['tost']) && isset($_GET['day'])) {
       $first = (int)$_GET['frst'];
       $tostion = (int)$_GET['tost'];
@@ -41,7 +39,6 @@ function convertInt(&$rw,$c) {
       $stmtd->execute();
       $rowsd = $stmtd->fetchAll(PDO::FETCH_ASSOC);
       convertInt($rowsd,'day_id');
-      var_dump($rowsd);
       $day = $rowsd[$dayid-1]['days'];
       echo "<pre>\n";
       foreach($rows as $row) {

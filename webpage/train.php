@@ -17,6 +17,11 @@ function convertInt(&$rw,$c) {
   <?php
     require_once "sqlconnect.php";
     if(isset($_GET['frst']) && isset($_GET['tost']) && isset($_GET['day'])) {
+      if($_GET['frst']==$_GET['tost']) {
+        echo 'Invalid selection of station';
+        header('location:chktrain.php');
+        exit;
+      }
       $first = (int)$_GET['frst'];
       $tostion = (int)$_GET['tost'];
       $dayid = (int)$_GET['day'];
@@ -40,12 +45,11 @@ function convertInt(&$rw,$c) {
       $rowsd = $stmtd->fetchAll(PDO::FETCH_ASSOC);
       convertInt($rowsd,'day_id');
       $day = $rowsd[$dayid-1]['days'];
-      echo "<pre>\n";
+      // echo "<tb>" Table Intialization
       foreach($rows as $row) {
         echo "<b>".$row['name'].'----'.$beg_station.'----'.$end_station.'----'.$day.'----'.$row['pantry']."</b><br>";
       }
     }
-    echo "end of file";
   ?>
 </body>
 </html>

@@ -24,7 +24,9 @@
           echo "<select name='frst' id='fromst'>\n";
           echo "<option value='0'>Choose an option:</option>";
           foreach($rows as $row) {
-            echo ("<option value=".$row['station_id'].'>'.$row['title'].'-'.$row['st_code'].'</option>');
+            echo ("<option value=");
+            echo $row['station_id'];
+            echo "'>'.$row['title'].'-'.$row['st_code'].'</option>'";
           }
           echo "</select>";
         ?>
@@ -37,7 +39,9 @@
         foreach($rows as $row) {
           if($row['station_id']== $_POST['frst'])
             continue;
-          echo ("<option value=".$row['station_id'].'>'.$row['title'].'-'.$row['st_code'].'</option>');
+          echo ("<option value=");
+          echo $row['station_id'];
+          echo "'>'.$row['title'].'-'.$row['st_code'].'</option>'";
         }
         echo "</select>";
       ?>
@@ -52,7 +56,9 @@
       echo "<select name='day' id='dayselect'style='margin-left:10px;'>\n";
       echo "<option value='0'>Choose an option:</option>";
       foreach($rows as $row) {
-        echo ("<option value=".$row['day_id'].'>'.$row['days'].'</option>');
+        echo ("<option value=");
+        echo $row['day_id'];
+        echo "'>'.$row['days'].'</option>'";
       }
       echo "</select>";
       ?>

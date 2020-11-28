@@ -13,14 +13,14 @@
     var_dump($_GET);
     if(isset($_GET['frst']) && isset($_GET['tost']) && isset($_GET['day'])) {
       $first = $_GET['frst'];
-      $tostion = $_GET['tost']; 
+      $tostion = $_GET['tost'];
       $dayid = $_GET['day'];
       $sql = "SELECT name,pantry FROM train WHERE beg_station = :first and end_station = :second and day_id = :day";
       $stmt=$pdo->prepare($sql);
       $stmt->execute(array(
-        ':first'=>$first,
-        ':second'=>$tostion,
-        ':day'=>$dayid));
+        ':first'=>$_GET['frst'],
+        ':second'=>$_GET['tost'],
+        ':day'=>$_GET['day']));
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $sqls = "SELECT * FROM station";
       $stmts = $pdo->prepare($sqls);

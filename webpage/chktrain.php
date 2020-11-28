@@ -12,7 +12,7 @@
     <h3 id="he1">Software Engineering Laboratory <br></h3>
     <h2 id="he1"> Check Train</h2>
   </div>
-  <div id="form_body" action="train.php" style="height:200px;width:300px;">
+  <div id="form_body" action="/train.php" style="height:200px;width:300px;">
     <form  style=" height:40px;margin-left:15px;" method="post"><br>
       <label for ="From:">From:</label>
         <?php
@@ -57,11 +57,8 @@
       echo "</select>";
       ?>
     <br><br>
-<<<<<<< HEAD:webpage/chktrain.php
-    <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-=======
+    <button type="button" class="btn btn-lg btn-primary" value="submit">Primary button</button>
     <input type='submit' value='Submit'style="margin-left:50px;"/>
->>>>>>> d7b641628d3173ecc37a64817649bfa7d5b9dcbd:src/webpage/chktrain.php
   </form>
   </div>
 </body>

@@ -1,7 +1,7 @@
 <?php
 function convertInt(&$rw,$c) {
   foreach($rw as $r) {
-    $r = (int)$r[$c];
+    $r[$c] = (int)$r[$c];
   }
 }
 ?>
@@ -34,14 +34,15 @@ function convertInt(&$rw,$c) {
       $stmts->execute();
       $rowss = $stmts->fetchAll(PDO::FETCH_ASSOC);
       convertInt($rowss,'station_id');
-      $beg_station = $rowss[$first]['title'];
-      $end_station = $rowss[$tostion]['title'];
+      $beg_station = $rowss[$first-1]['title'];
+      $end_station = $rowss[$tostion-1]['title'];
       $sqld = "SELECT * FROM day";
       $stmtd = $pdo->prepare($sqld);
       $stmtd->execute();
       $rowsd = $stmtd->fetchAll(PDO::FETCH_ASSOC);
       convertInt($rowsd,'day_id');
-      $day = $rowsd[$dayid];
+      var_dump($rowsd);
+      $day = $rowsd[$dayid-1]['days'];
       echo "<pre>\n";
       foreach($rows as $row) {
         echo "<b>".$row['name'].'----'.$beg_station.'----'.$end_station.'----'.$day.'----'.$row['pantry']."</b><br>";

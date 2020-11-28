@@ -1,3 +1,7 @@
+<?php
+
+require_once "sqlconnect.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,7 @@
     <h3 id="he1">Software Engineering Laboratory <br></h3>
     <h2 id="he1"> Signup</h2>
   </div>
-  <form action="signup.php" method="post">
+  <form method="post">
   <div id="form_page">
     <div id="form_body">
       <label for="uname"><b>Username</b></label>

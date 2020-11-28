@@ -1,3 +1,23 @@
+<?php
+require_once "sqlconnect.php";
+if(isset($_POST['uname']) && isset($_POST['psw'])) {
+  $uname = $_POST['uname'];
+  if(strstr($uname,'@'))
+    $sql = "SELECT email,pass from users where users.email = :email";
+  else
+    $sql = "SELECT uname,pass from users where users.uname = :email";
+
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute(array(':email'=> $uname));
+  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  if(strnatcmp($rows['pass'],$_POST['psw'])!=0) {
+    echo "Incorrect password\n";
+  }
+  else
+    header("Location: login.php");
+    exit;
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +32,7 @@
     <h3 id="he1">Software Engineering Laboratory <br></h3>
     <h2 id="he1"> Login</h2>
   </div>
-<form action="action_page.php" method="post">
+<form method="post">
 <div id="form_page">
   <div id="form_body">
     <label for="uname"><b>Username</b></label>

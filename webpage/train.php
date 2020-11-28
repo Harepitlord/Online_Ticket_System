@@ -16,15 +16,15 @@ function convertInt(&$rw,$c) {
 <body>
   <?php
     require_once "sqlconnect.php";
-    if(isset($_GET['frst']) && isset($_GET['tost']) && isset($_GET['day'])) {
-      if($_GET['frst']==$_GET['tost']) {
+    if(isset($_POST['frst']) && isset($_POST['tost']) && isset($_POST['day'])) {
+      if($_POST['frst']==$_POST['tost']) {
         echo 'Invalid selection of station';
         header('location:chktrain.php');
         exit;
       }
-      $first = (int)$_GET['frst'];
-      $tostion = (int)$_GET['tost'];
-      $dayid = (int)$_GET['day'];
+      $first = (int)$_POST['frst'];
+      $tostion = (int)$_POST['tost'];
+      $dayid = (int)$_POST['day'];
       $sql = "SELECT name,pantry FROM train WHERE beg_station = :first and end_station = :second and day_id = :day";
       $stmt=$pdo->prepare($sql);
       $stmt->execute(array(

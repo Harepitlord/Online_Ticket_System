@@ -12,8 +12,8 @@
     <h3 id="he1">Software Engineering Laboratory <br></h3>
     <h2 id="he1"> Check Train</h2>
   </div>
-  <form id="form_body" action="/train.php" style="height:200px;width:300px;">
-    <div  style=" height:40px;margin-left:15px;" method="GET"><br>
+  <form id="form_body" action="/train.php" style="height:200px;width:300px;"method="POST">
+    <div  style=" height:40px;margin-left:15px;" method="POST"><br>
       <label for ="From:">From:</label>
         <?php
           require_once "sqlconnect.php";
@@ -31,7 +31,7 @@
           echo "</select>";
         ?>
     </div><br>
-    <div  style="height:40px;margin-left:15px;" method="GET">
+    <div  style="height:40px;margin-left:15px;" method="POST">
       <label for = 'To:'> To:</label>
       <?php
         echo "<select name='tost'style='margin-left:15px;'>\n";
@@ -46,7 +46,7 @@
         echo "</select>";
       ?>
     </div>
-    <div style="height:40px;margin-left:13px;" method="GET">
+    <div style="height:40px;margin-left:13px;" method="POST">
       <label for='Day:'>Day:</label>
       <?php
       $sql = "SELECT * FROM day";

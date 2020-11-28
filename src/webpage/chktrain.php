@@ -12,8 +12,8 @@
     <h3 id="he1">Software Engineering Laboratory <br></h3>
     <h2 id="he1"> Check Train</h2>
   </div>
-  <div id="form_body" action="train.php">
-    <form  style=" height:40px;" method="post">
+  <div id="form_body" action="train.php" style="height:200px;width:300px;">
+    <form  style=" height:40px;margin-left:15px;" method="post"><br>
       <label for ="From:">From:</label>
         <?php
           require_once "sqlconnect.php";
@@ -28,11 +28,11 @@
           }
           echo "</select>";
         ?>
-    </form>
-    <form  style="height:40px;" method="post">
+    </form><br>
+    <form  style="height:40px;margin-left:15px;" method="post">
       <label for = 'To:'> To:</label>
       <?php
-        echo "<select name='tost'>\n";
+        echo "<select name='tost'style='margin-left:15px;'>\n";
         echo "<option value='0'>Choose an option:</option>";
         foreach($rows as $row) {
           if($row['station_id']== $_POST['frst'])
@@ -42,22 +42,22 @@
         echo "</select>";
       ?>
     </form>
-    <form style="height:40px;" method="post">
+    <form style="height:40px;margin-left:13px;" method="post">
       <label for='Day:'>Day:</label>
       <?php
       $sql = "SELECT * FROM day";
       $stmt = $pdo->prepare($sql);
       $stmt->execute();
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-      echo "<select name='day' id='dayselect'>\n";
+      echo "<select name='day' id='dayselect'style='margin-left:10px;'>\n";
       echo "<option value='0'>Choose an option:</option>";
       foreach($rows as $row) {
-        echo ("<option value=".$row['day_id'].'>'.$row['title'].'</option>');
+        echo ("<option value=".$row['day_id'].'>'.$row['days'].'</option>');
       }
       echo "</select>";
       ?>
     <br><br>
-    <input type='submit' value='Submit'/>
+    <input type='submit' value='Submit'style="margin-left:50px;"/>
   </div>
 </body>
 </html>

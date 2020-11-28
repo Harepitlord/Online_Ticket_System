@@ -9,13 +9,17 @@ if(isset($_POST['uname']) && isset($_POST['psw'])) {
 
   $stmt = $pdo->prepare($sql);
   $stmt->execute(array(':email'=> $uname));
-  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  if(strnatcmp($rows['pass'],$_POST['psw'])!=0) {
-    echo "Incorrect password\n";
+  if($stmt->rowCount() > 0) {
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if(strnatcmp($rows['pass'],$_POST['psw'])!=0) {
+      echo "Incorrect password\n";
+    }
+    else
+      header("Location: chktrain.php");
+      exit;
   }
   else
-    header("Location: login.php");
-    exit;
+    echo "Incorrect email / username\n";
 }
  ?>
 <!DOCTYPE html>

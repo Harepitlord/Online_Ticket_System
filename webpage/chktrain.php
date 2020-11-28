@@ -26,7 +26,7 @@
           foreach($rows as $row) {
             echo ("<option value=");
             echo $row['station_id'];
-            echo "'>'.$row['title'].'-'.$row['st_code'].'</option>'";
+            echo ('>'.$row['title'].'-'.$row['st_code'].'</option>');
           }
           echo "</select>";
         ?>
@@ -41,7 +41,7 @@
             continue;
           echo ("<option value=");
           echo $row['station_id'];
-          echo "'>'.$row['title'].'-'.$row['st_code'].'</option>'";
+          echo ('>'.$row['title'].'-'.$row['st_code'].'</option>');
         }
         echo "</select>";
       ?>

@@ -13,7 +13,7 @@
     <h2 id="he1"> Check Train</h2>
   </div>
   <form id="form_body" action="/train.php" style="height:200px;width:300px;"method="POST">
-    <div  style=" height:40px;margin-left:15px;" method="POST"><br>
+    <div  style=" height:40px;margin-left:15px;"><br>
       <label for ="From:">From:</label>
         <?php
           require_once "sqlconnect.php";
@@ -31,7 +31,7 @@
           echo "</select>";
         ?>
     </div><br>
-    <div  style="height:40px;margin-left:15px;" method="POST">
+    <div  style="height:40px;margin-left:15px;">
       <label for = 'To:'> To:</label>
       <?php
         echo "<select name='tost'style='margin-left:15px;'>\n";
@@ -46,7 +46,7 @@
         echo "</select>";
       ?>
     </div>
-    <div style="height:40px;margin-left:13px;" method="POST">
+    <div style="height:40px;margin-left:13px;">
       <label for='Day:'>Day:</label>
       <?php
       $sql = "SELECT * FROM day";

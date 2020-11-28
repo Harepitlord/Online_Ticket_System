@@ -12,10 +12,10 @@
     <h3 id="he1">Software Engineering Laboratory <br></h3>
     <h2 id="he1"> Check Train</h2>
   </div>
-  <div id="form_body" action="/train.php" style="height:200px;width:300px;">
-    <form  style=" height:40px;margin-left:15px;" method="post"><br>
+  <form id="form_body" action="/train.php" style="height:200px;width:300px;">
+    <div  style=" height:40px;margin-left:15px;" method="post"><br>
       <label for ="From:">From:</label>
-        <?php 
+        <?php
           require_once "sqlconnect.php";
           $sql = "SELECT * FROM station";
           $stmt = $pdo->prepare($sql);
@@ -28,8 +28,8 @@
           }
           echo "</select>";
         ?>
-    </form><br>
-    <form  style="height:40px;margin-left:15px;" method="post">
+    </div><br>
+    <div  style="height:40px;margin-left:15px;" method="post">
       <label for = 'To:'> To:</label>
       <?php
         echo "<select name='tost'style='margin-left:15px;'>\n";
@@ -41,8 +41,8 @@
         }
         echo "</select>";
       ?>
-    </form>
-    <form style="height:40px;margin-left:13px;" method="post">
+    </div>
+    <div style="height:40px;margin-left:13px;" method="post">
       <label for='Day:'>Day:</label>
       <?php
       $sql = "SELECT * FROM day";
@@ -57,9 +57,8 @@
       echo "</select>";
       ?>
     <br><br>
-    <button type="button" class="btn btn-lg btn-primary" value="submit">Primary button</button>
-    <input type='submit' value='Submit'style="margin-left:50px;"/>
-  </form>
+    <input type='submit' value='Submit'style="margin-left:50px"/>
   </div>
+  </form>
 </body>
 </html>

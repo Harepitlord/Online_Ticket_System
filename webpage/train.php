@@ -1,3 +1,10 @@
+<?php
+function convertInt(&$rw,$c) {
+  foreach($rw as $r) {
+    $r = (int)$r[$c];
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,26 +19,28 @@
     require_once "sqlconnect.php";
     var_dump($_GET);
     if(isset($_GET['frst']) && isset($_GET['tost']) && isset($_GET['day'])) {
-      $first = $_GET['frst'];
-      $tostion = $_GET['tost'];
-      $dayid = $_GET['day'];
+      $first = (int)$_GET['frst'];
+      $tostion = (int)$_GET['tost'];
+      $dayid = (int)$_GET['day'];
       $sql = "SELECT name,pantry FROM train WHERE beg_station = :first and end_station = :second and day_id = :day";
       $stmt=$pdo->prepare($sql);
       $stmt->execute(array(
-        ':first'=>(int)$_GET['frst'],
-        ':second'=>(int)$_GET['tost'],
-        ':day'=>(int)$_GET['day']));
+        ':first'=>$first,
+        ':second'=>$tostion,
+        ':day'=>$dayid));
       $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
       $sqls = "SELECT * FROM station";
       $stmts = $pdo->prepare($sqls);
       $stmts->execute();
       $rowss = $stmts->fetchAll(PDO::FETCH_ASSOC);
-      $beg_station = $rowss[$first];
-      $end_station = $rowss[$tostion];
+      convertInt($rowss,'station_id');
+      $beg_station = $rowss[$first]['title'];
+      $end_station = $rowss[$tostion]['title'];
       $sqld = "SELECT * FROM day";
       $stmtd = $pdo->prepare($sqld);
       $stmtd->execute();
       $rowsd = $stmtd->fetchAll(PDO::FETCH_ASSOC);
+      convertInt($rowsd,'day_id');
       $day = $rowsd[$dayid];
       echo "<pre>\n";
       foreach($rows as $row) {

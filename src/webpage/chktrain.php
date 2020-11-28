@@ -12,7 +12,8 @@
     <h3 id="he1">Software Engineering Laboratory <br></h3>
     <h2 id="he1"> Check Train</h2>
   </div>
-  <div id="form_body" action="train.php" style="height:200px;width:300px;">
+  <form action="train.php">
+  <div id="form_body" style="height:200px;width:300px;">
     <form  style=" height:40px;margin-left:15px;" method="post"><br>
       <label for ="From:">From:</label>
         <?php
@@ -59,5 +60,6 @@
     <br><br>
     <input type='submit' value='Submit'style="margin-left:50px;"/>
   </div>
+  </form>
 </body>
 </html>

@@ -58,7 +58,7 @@
       foreach($rows as $row) {
         echo ("<option value=");
         echo $row['day_id'];
-        echo "'>'.$row['days'].'</option>'";
+        echo ('>'.$row['days'].'</option>');
       }
       echo "</select>";
       ?>

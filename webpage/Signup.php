@@ -1,6 +1,6 @@
 <?php
 require_once "sqlconnect.php";
-if(isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['psw']))) {
+if(isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['psw'])) {
   $sql1= "SELECT uname from  users where users.uname = :uname";
   $sql2= "SELECT email from users where users.email = :email";
   $stmt1 = $pdo->prepare($sql1);

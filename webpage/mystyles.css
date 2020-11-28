@@ -1,0 +1,57 @@
+#he1
+{
+    text-align: center;
+    color:Blue;
+    font-family: Arial;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-right: 50px;
+}
+
+.container {
+  padding: 16px;
+}
+
+#form_page {
+            height: 500px;
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin: auto;
+
+        }
+
+#form_body {
+    border-radius: 12px;
+    height: 330px;
+    width: 450px;
+    background-color: beige;
+    border: 1px solid pink;
+    margin: auto;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#options
+{
+  align-items: center;
+  position: relative;
+  left:600px;
+  top:20px;
+}

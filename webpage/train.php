@@ -57,7 +57,7 @@ function convertInt(&$rw,$c) {
       }
     }
     else{
-      header('Location: index.php');
+      header('Location: index.html');
     }
   ?>
 </body>

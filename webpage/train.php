@@ -46,7 +46,7 @@ function convertInt(&$rw,$c) {
       convertInt($rowsd,'day_id');
       $day = $rowsd[$dayid-1]['days'];
       // echo "<tb>" Table Intialization
-      echo "<table> <tr>";
+      echo "<table id='table1'> <tr>";
       echo "<th>Train name:</th><th>From Station:</th><th>To Station:</th><th>Frequency</th><th>Pantry</th></tr>";
       foreach($rows as $row) {
         echo "<tr><td>".$row['name']."</td>";

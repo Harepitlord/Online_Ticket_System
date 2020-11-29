@@ -12,7 +12,7 @@
     <h3 id="he1">Software Engineering Laboratory <br></h3>
     <h2 id="he1"> Check Train</h2>
   </div>
-  <form id="form_body" action="/train.php" style="height:200px;width:300px;"method="POST">
+  <form id="form_body" action="/train.php" style="height:200px;width:280px;margin:auto;"method="POST">
     <div  style=" height:40px;margin-left:15px;"><br>
       <label for ="From:">From:</label>
         <?php

@@ -14,7 +14,10 @@ function convertInt(&$rw,$c) {
   <link rel="stylesheet" href="mystyles.css"/>
 </head>
 <body>
+  <h1 id="he1">Online Ticket Reservation System</h1>
+  <h2 id="he1"> The search result for your specifications:</h2><br><br>
   <?php
+    $sno=1;
     require_once "sqlconnect.php";
     if(isset($_POST['frst']) && isset($_POST['tost']) && isset($_POST['day'])) {
       if($_POST['frst']==$_POST['tost']) {
@@ -47,9 +50,10 @@ function convertInt(&$rw,$c) {
       $day = $rowsd[$dayid-1]['days'];
       // echo "<tb>" Table Intialization
       echo "<table id='tabe1'> <tr>";
-      echo "<th>Train name:</th><th>From Station:</th><th>To Station:</th><th>Frequency</th><th>Pantry</th></tr>";
+      echo "<th>Sno:</th><th>Train name:</th><th>From Station:</th><th>To Station:</th><th>Frequency</th><th>Pantry</th></tr>";
       foreach($rows as $row) {
-        echo "<tr><td>".$row['name']."</td>";
+        echo "<tr><td>".$sno++."</td>";
+        echo "<td>".$row['name']."</td>";
         echo "<td>".$beg_station."</td>";
         echo "<td>".$end_station."</td>";
         echo "<td>".$day."</td>";

@@ -2,7 +2,7 @@
 {
     text-align: center;
     color:Blue;
-    font-family: Arial;
+    font-family: Tahoma;
     font-style: italic;
     font-weight: bold;
 
@@ -63,10 +63,25 @@ button:hover {
   margin: auto;
   border-color:black;
   padding: 8px;
-  overflow:scroll;
+  border-collapse: collapse;
+  table-layout:auto;
+  column-width: auto;
 }
 
 body {
   font-family: tahoma,sans-serif;
 
 }
+
+table td {
+            padding: 8px;
+            border: 5px;
+            border-color: black;
+            border-style: outset;
+        }
+        table th {
+            padding: 8px;
+            border: 5px;
+            border-color: black;
+            border-style: outset;
+        }

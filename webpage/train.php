@@ -14,6 +14,7 @@ function convertInt(&$rw,$c) {
   <link rel="stylesheet" href="mystyles.css"/>
 </head>
 <body>
+  <div id="options" style="top:100px;width:600px;height:400px;">
   <h1 id="he1">Online Ticket Reservation System</h1>
   <h2 id="he1"> The search result for your specifications:</h2><br><br>
   <?php
@@ -64,5 +65,6 @@ function convertInt(&$rw,$c) {
       header('Location: index.html');
     }
   ?>
+</div>
 </body>
 </html>

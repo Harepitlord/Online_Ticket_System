@@ -7,14 +7,14 @@
     <script src="myscript.js"></script>
 </head>
 <body>
-  <div style=" margin: auto; ">
-    <h1 id="he1"> Online Ticket Reservation System<br></h1>
-    <h3 id="he1">Software Engineering Laboratory <br></h3>
-    <h2 id="he1"> Check Train</h2>
+  <div style=" margin: auto;">
+    <h1 id="he1"style="color:white"> Online Ticket Reservation System<br></h1>
+    <h3 id="he1"style="color:white">Software Engineering Laboratory <br></h3>
+    <h2 id="he1"style="color:white"> Check Train</h2>
   </div>
   <form id="form_body" action="/train.php" style="height:200px;width:280px;margin:auto;"method="POST">
     <div  style=" height:40px;margin-left:15px;"><br>
-      <label for ="From:">From:</label>
+      <label for ="From:"><b>From:</b></label>
         <?php
           require_once "sqlconnect.php";
           $sql = "SELECT * FROM station";
@@ -32,7 +32,7 @@
         ?>
     </div><br>
     <div  style="height:40px;margin-left:15px;">
-      <label for = 'To:'> To:</label>
+      <label for = 'To:'><b> To:</b></label>
       <?php
         echo "<select name='tost'style='margin-left:15px;'>\n";
         echo "<option value='0'>Choose an option:</option>";
@@ -47,7 +47,7 @@
       ?>
     </div>
     <div style="height:40px;margin-left:13px;">
-      <label for='Day:'>Day:</label>
+      <label for='Day:'><b>Day:</b></label>
       <?php
       $sql = "SELECT * FROM day";
       $stmt = $pdo->prepare($sql);
@@ -63,7 +63,7 @@
       echo "</select>";
       ?>
     <br><br>
-    <input type='submit' value='Submit'style="margin-left:50px"/>
+    <button type="submit">Submit</button><br>
   </div>
   </form>
 </body>

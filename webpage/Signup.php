@@ -43,11 +43,11 @@ if(isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['psw'])) {
   <form method="post">
   <div id="form_page">
     <div id="form_body">
-      <label for="uname"><b>Username</b></label>
+      <label for="uname"><b>Username </b></label>
       <input type="text" placeholder="Enter Username" name="uname" required><br>
-      <label for="email"><b>Email</b></label>
+      <label for="email"><b>Email   </b></label>
       <input type="email" placeholder-"Enter Email ID" name="email" required><br>
-      <label for="psw"><b>Password</b></label>
+      <label for="psw"><b>Password   </b></label>
       <input type="password" placeholder="Enter Password" name="psw" required><br>
       <label for="rpsw"><b>Re-enter Password</b></label>
       <input type="password" placeholder="Enter Password" name="rpsw" required><br>

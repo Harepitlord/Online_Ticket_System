@@ -31,28 +31,21 @@ if(isset($_POST['uname']) && isset($_POST['psw'])) {
     <script src="myscript.js"></script>
 </head>
 <body>
-  <div id="head">
+<form method="post" style="left:200;margin:auto;padding:20px;padding-left:400px;">
+  <div id="form_body" style="height:450px;width:500px" >
     <h1 id="he1"> Online Ticket Reservation System</h1>
     <h3 id="he1">Software Engineering Laboratory <br></h3>
-    <h2 id="he1"> Login</h2>
-  </div>
-<form method="post">
-<div id="form_page">
-  <div id="form_body">
+    <h2 id="he1"> Login</h2><br><br>
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required><br>
-    <label for="psw"><b>Password</b></label>
+    <br><label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required><br>
     <button type="submit">Login</button><br>
     <label>
-  </div>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-  </div>
-  <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
 </form>
 </body>
 </html>

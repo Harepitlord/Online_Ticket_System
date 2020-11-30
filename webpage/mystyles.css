@@ -1,21 +1,21 @@
 #he1
 {
     text-align: center;
-    color:Blue;
-    font-family: Arial;
+    color: black;
+    font-family: Tahoma;
     font-style: italic;
     font-weight: bold;
 
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #4254f5;
   color: white;
-  padding: 14px 20px;
+  padding: 10px 10px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: auto;
   margin-right: 50px;
 }
 
@@ -37,11 +37,16 @@ button {
     border-radius: 12px;
     height: 330px;
     width: 450px;
-    background-color: beige;
-    border: 1px solid pink;
+    background-color: white;
+    border: 1px outset black;
     margin: auto;
     margin-top: 12px;
     margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    align-items: center;
+    position: relative;
+
 }
 
 button:hover {
@@ -50,8 +55,43 @@ button:hover {
 
 #options
 {
+  background-color: white;
+  border: 1px outset black;
   align-items: center;
   position: relative;
-  left:600px;
-  top:20px;
+  margin: auto;
+  height: 300px;
+  width: 550px;
+  border-radius: 12px;
 }
+
+
+#tabe1 {
+  border-width:medium;
+  border-style: outset;
+  margin: auto;
+  border-color:black;
+  padding: 8px;
+  border-collapse: collapse;
+  table-layout:auto;
+  column-width: auto;
+}
+
+body {
+  font-family: tahoma,sans-serif;
+  background-color: #42aaf5;
+
+}
+
+table td {
+            padding: 8px;
+            border: 5px;
+            border-color: black;
+            border-style: outset;
+        }
+        table th {
+            padding: 8px;
+            border: 5px;
+            border-color: black;
+            border-style: outset;
+        }
